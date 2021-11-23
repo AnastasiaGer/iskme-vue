@@ -13,6 +13,7 @@
 <style>
 .pagination {
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .pagination-list {
