@@ -69,6 +69,38 @@ export default {
           resourcesNumber: 67,
           modifiedDate: `June 8, 2021`,
         },
+        {
+          micrositeTitle: `MI`,
+          id: 5,
+          collectionTitle: `PheT Interactives`,
+          collectionThumbnail: '6.jpeg',
+          resourcesNumber: 67,
+          modifiedDate: `June 8, 2021`,
+        },
+        {
+          micrositeTitle: `MI`,
+          id: 5,
+          collectionTitle: `PheT Interactives`,
+          collectionThumbnail: '6.jpeg',
+          resourcesNumber: 67,
+          modifiedDate: `June 8, 2021`,
+        },
+        {
+          micrositeTitle: `MI`,
+          id: 5,
+          collectionTitle: `PheT Interactives`,
+          collectionThumbnail: '6.jpeg',
+          resourcesNumber: 67,
+          modifiedDate: `June 8, 2021`,
+        },
+        {
+          micrositeTitle: `MI`,
+          id: 5,
+          collectionTitle: `PheT Interactives`,
+          collectionThumbnail: '6.jpeg',
+          resourcesNumber: 67,
+          modifiedDate: `June 8, 2021`,
+        },
       ]
     }
   },

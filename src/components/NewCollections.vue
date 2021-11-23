@@ -6,11 +6,15 @@
     </div>
 
     <ul class="collection">
-      <ItemCollection 
-      v-for="(collection, index) in mockData" :key="index"
-      v-bind:collection="collection"/>
+      <ItemCollection
+        v-for="(collection, index) in mockData"
+        :key="index"
+        v-bind:collection="collection"
+      />
     </ul>
   </div>
+  <button @click="prevSlide">Prev</button>
+  <button @click="nextSlide">Next</button>
   <Pagination />
 </template>
 
@@ -24,7 +28,22 @@ export default {
   components: {
     Pagination,
     ItemCollection
-  }
+  },
+  data() {
+    return {
+      currentSlideIndex: 0,
+    }
+  },
+  methods: {
+    prevSlide() {
+      if (this.currentSlideIndex > 0) {
+        this.currentSlideIndex--
+      }
+    },
+    nextSlide() {
+      this.currentSlideIndex++
+    }
+  },
 }
 </script>
 
@@ -36,6 +55,7 @@ export default {
 
 .collection-wrapper {
   margin-bottom: 25px;
+  box-sizing: border-box;
 }
 
 .title-wrapper {
@@ -56,5 +76,8 @@ export default {
   display: flex;
   justify-content: space-between;
   list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 </style>

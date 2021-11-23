@@ -47,11 +47,11 @@ export default {
 
 <style>
 .collection-item {
-  width: 19%;
+  min-width: 271px;
   height: 250px;
+  margin-right: 15px;
   background-color: #adb0b6;
-  display: flex;
-  flex-direction: column;
+  display: block;
   box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.35);
 }
 .collection-item-title {
