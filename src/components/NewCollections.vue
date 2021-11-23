@@ -5,7 +5,7 @@
       <a class="sub-title" href="#">View All collections</a>
     </div>
 
-    <ul class="collection">
+    <ul class="collection" :style="{ 'margin-left': '-' + 100 * currentSlideIndex + '%' }">
       <ItemCollection
         v-for="(collection, index) in mockData"
         :key="index"
@@ -19,32 +19,39 @@
 </template>
 
 <script>
-import Pagination from './Pagination.vue'
-import ItemCollection from './ItemCollection.vue'
+import Pagination from "./Pagination.vue";
+import ItemCollection from "./ItemCollection.vue";
 
 export default {
-  name: 'NewCollections',
-  props: ['mockData'],
+  name: "NewCollections",
+  props: ["mockData"],
   components: {
     Pagination,
-    ItemCollection
+    ItemCollection,
   },
   data() {
     return {
       currentSlideIndex: 0,
-    }
+    };
   },
   methods: {
     prevSlide() {
       if (this.currentSlideIndex > 0) {
-        this.currentSlideIndex--
+        this.currentSlideIndex--;
       }
     },
     nextSlide() {
-      this.currentSlideIndex++
-    }
+      if (this.currentSlideIndex >= this.mockData.length - 10) {
+        this.currentSlideIndex = 0;
+        console.log(this.currentSlideIndex);
+        
+      } else {
+        this.currentSlideIndex++;
+      }
+
+    },
   },
-}
+};
 </script>
 
 <style>
@@ -56,6 +63,11 @@ export default {
 .collection-wrapper {
   margin-bottom: 25px;
   box-sizing: border-box;
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 1574px;
 }
 
 .title-wrapper {
@@ -75,9 +87,6 @@ export default {
 .collection {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  transition: all ease 0.5s;
 }
 </style>

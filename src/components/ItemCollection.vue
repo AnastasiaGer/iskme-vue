@@ -47,7 +47,7 @@ export default {
 
 <style>
 .collection-item {
-  min-width: 271px;
+  min-width: 300px;
   height: 250px;
   margin-right: 15px;
   background-color: #adb0b6;
