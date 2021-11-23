@@ -1,7 +1,7 @@
 <template>
   <li class="collection-item">
     <div class="collection-item-info">
-      <img class="collection-item-img" src="https://picsum.photos/228/200" alt="Collection Photo" />
+      <img class="collection-item-img" v-bind:src="'src/assets/collections/' + collection.collectionThumbnail" alt="Collection Photo" />
       <h4 class="collection-item-title">{{collection.collectionTitle}}</h4>
       <button class="btn btn--show-big">
         <svg
@@ -64,7 +64,11 @@ export default {
   flex-direction: column;
   position: relative;
 }
-
+.collection-item-img{
+  display: block;
+    width: 100%;
+    height: 200px;
+}
 .collection-item-title {
   z-index: 10;
   position: absolute;
