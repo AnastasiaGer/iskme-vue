@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div v-bind="mockData" class="main-wrapper">
     <Header ></Header>
     <keep-alive>
       <router-view></router-view>
@@ -14,7 +14,7 @@
     components: {
       Header
     },
-    props: {},
+    props: ["mockData"],
     data() {
       return {
         title: 'Main wrapper'

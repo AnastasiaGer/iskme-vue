@@ -9,6 +9,20 @@ import MainWrapper from './components/MainWrapper.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      mockData: [],
+    }
+  },
+  //TODO:throw props to children
+  mounted() {
+    fetch('https://api.npoint.io/80a1bc56007c395a26b3')
+    .then(response => response.json())
+    .then(json => {
+      console.log(json);
+      this.mockData = json
+    })
+  },
   components: {
     MainWrapper
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class='main-page'>
+  <div v-bind="mockData" class='main-page'>
     <h1>It is a Home Page for Browse collections</h1>
     <p>
       <router-link :to="{name: 'NewCollections'}">
@@ -12,7 +12,7 @@
 <script>
   export default {
     name: "main-page",
-    props: {},
+    props: ["mockData"],
     data() {
       return {}
     },
