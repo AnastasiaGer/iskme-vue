@@ -2,7 +2,7 @@
   <div class="collection-wrapper container-fluid">
     <div class="title-wrapper">
       <h3 class="title">New Collection</h3>
-      <a class="sub-title" href="#">View All collections</a>
+      <a class="sub-title" href="#" @click='viewAllHandler'>View All collections</a>
     </div>
 
     <ul class="collection" :style="{ 'margin-left': '-' + 100 * currentSlideIndex + '%' }">
@@ -50,6 +50,9 @@ export default {
       }
 
     },
+    viewAllHandler() {
+      console.log('cgcgcgcg')
+    }
   },
 };
 </script>

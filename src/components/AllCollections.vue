@@ -1,17 +1,36 @@
 <template>
-   <div id="app">
-     <MainWrapper></MainWrapper>
-   </div>
+  <Header></Header>
+
+  <main>
+    <h2>Collections</h2>
+
+  </main>
+
+  <footer></footer>
 </template>
 
 <script>
-import MainWrapper from './components/MainWrapper.vue'
+
+import Header from './Header.vue'
 
 export default {
   name: 'app',
-  components: {
-    MainWrapper
+  data() {
+    return {
+      mockData: [],
+    }
   },
+  mounted() {
+    fetch('https://api.npoint.io/80a1bc56007c395a26b3')
+    .then(response => response.json())
+    .then(json => {
+      console.log(json);
+      this.mockData = json
+    })
+  },
+  components: {
+    Header,
+  }
 }
 </script>
 
