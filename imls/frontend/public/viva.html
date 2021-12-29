@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>VIVA</title>
+  </head>
+  <body>
+    <h1>VIVA</h1>
+    <script id="config" type="application/json">
+      {
+	  "indexes": [{"idx": "viva",
+                       "name": "Mine"},
+                      {"idx": "exchange",
+                       "name": "Shared"}],
+	  "boost": {
+	      "viva": 1.0
+	  },
+	  "agg_fields": {
+              "accessibility": {"label": "Accessibility", "limit": 10},
+              "ed_standards": {"label": "Education Standards", "limit": 100, "sep": "."},
+              "subject": {"label": "Subject", "limit": 100},
+              "media_formats": {"label": "Media Format", "limit": 10},
+              "sublevel": {"label": "SubLevel", "limit": 10},
+              "educational_use": {"label": "Educational Use", "limit": 10},
+              "primary_user": {"label": "Primary User", "limit": 10},
+              "keywords": {"label": "Keywords", "limit": 10}
+          }
+      }
+    </script>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

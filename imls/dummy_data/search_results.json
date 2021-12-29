@@ -1,0 +1,45 @@
+{
+    "took" : 5,
+    "hits" : {
+	"total" : 59,
+	"max_score" : null,
+	"hits" : [
+	    {
+		"title" : "Title 1",
+		"subject" : "Quantum Physics"
+	    },
+	    {
+		"title": "Title 2",
+		"subject" : "Blackholes"
+	    }
+	]
+    },
+    "facets" : {
+	"subject" : [
+            {
+		"key" : "Science",
+		"doc_count" : 1146,
+		"children" : [
+		    {
+			"key" : "Applied Science",
+			"doc_count": 1000,
+			"children": []
+		    },
+		    {
+			"key": "Theoritical Science",
+			"doc_count": 146,
+			"children": []
+		    }
+		]
+            }
+	],
+	"media_type" : [
+            {
+		"key" : "Text",
+		"doc_count" : 46,
+		"children" : []
+            }
+	]
+
+    }
+}

@@ -1,0 +1,52 @@
+{% extends "newdesign/base.html" %}
+
+{% load render_bundle from webpack_loader %}
+{% load i18n %}
+{% load compile_static %}
+{% load static %}
+
+{% block extra-js %}
+  <script src="{% static "core/autocomplete/typeahead.bundle.min.js" %}"></script>
+  <script src="{% static "core/bootstrap3/js/tooltip.js" %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{% endblock %}
+
+{% block extra-cdn-css %}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cc-icons/1.2.1/css/cc-icons.min.css"/>
+{% endblock %}
+
+{% block extra-css %}
+  <link rel="stylesheet" type="text/x-scss" href="{% static 'newdesign/styles/font-awesome/scss/font-awesome.scss' %}" />
+  <link rel="stylesheet" type="text/x-scss" href="{% static 'newdesign/styles/myitems/save-widget.scss' %}">
+  <link rel="stylesheet" href="{% static 'core/forms/tokenfield/tokenfield-typeahead.min.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <script id="config" type="application/json">
+      {
+	  "indexes": [{"idx": "louis",
+                       "name": "Mine"},
+                      {"idx": "exchange",
+                       "name": "Shared"}],
+	  "boost": {
+	      "louis": 1.5
+	  },
+	  "agg_fields": {
+              "subject": {"label": "Subject", "limit": 50, "sep": "|"},
+              "media_formats": {"label": "Media Format", "limit": 10},
+              "ed_standards": {"label": "Education Standards",
+                               "limit": 100, "sep": "."}
+          }
+      }
+    </script>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+    {% render_bundle 'app' %}
+  </div>
+{% endblock %}
+
+{% block extra-footer %}
+  {% include "include/cou-tooltips.html" %}
+{% endblock %}

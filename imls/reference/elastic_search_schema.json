@@ -1,0 +1,104 @@
+{
+    "settings": {
+	"analysis": {
+	    "analyzer": {
+		"path-analyzer": {
+		    "tokenizer": "path-tokenizer"
+		},
+		"ed-std-analyzer": {
+		    "tokenizer": "ed-std-tokenizer"
+		}
+	    },
+	    "tokenizer": {
+		"path-tokenizer": {
+		    "type": "path_hierarchy",
+		    "delimiter": "|"
+		},
+		"ed-std-tokenizer": {
+		    "type": "path_hierarchy",
+		    "delimiter": "."
+		}
+	    }
+	}
+    },
+
+    "mappings": {
+	"properties": {
+	    "author": {
+		"type": "nested",
+		"properties": {
+		    "name": {"type": "text"},
+		    "email": {"type": "keyword"},
+		    "country": {"type": "keyword"}
+		}
+	    },
+
+            "abstract": {
+		"type": "text",
+		"fields": {
+		    "english": {
+			"type": "text",
+			"analyzer": "english"
+		    },
+		    "keywords": {
+			"type": "keyword"
+		    }
+		}
+	    },
+
+            "accessibility": {"type": "keyword"},
+            "adaptation_of_url": {"type": "keyword"},
+            "cou_bucket": {"type": "keyword"},
+            "cou_copyright_holder": {"type": "keyword"},
+            "cou_description": {"type": "text"},
+            "cou_title": {"type": "keyword"},
+            "cou_url": {"type": "keyword"},
+            "create_date": {"type": "date"},
+            "doi_handle": {"type": "keyword"},
+            "educational_use": {"type": "keyword"},
+            "ed_crosswalks": {"type": "keyword"},
+            "ed_standards": {
+		"type": "text",
+		"analyzer": "ed-std-analyzer",
+		"search_analyzer": "keyword",
+		"fielddata": true
+	    },
+            "endorsements": {"type": "keyword"},
+            "entry_date": {"type": "date"},
+            "grade": {"type": "keyword"},
+            "groups": {"type": "keyword"},
+            "http_status": {"type": "keyword"},
+            "id": {"type": "long"},
+            "irr": {"type": "keyword"},
+            "keywords": {"type": "keyword"},
+            "language": {"type": "keyword"},
+            "material_type": {"type": "keyword"},
+            "media_formats": {"type": "keyword"},
+            "modified_date": {"type": "date"},
+            "native_id": {"type": "keyword"},
+            "notable_reqs": {"type": "text"},
+            "oai_identifiers": {"type": "keyword"},
+            "oerc_url": {"type": "keyword"},
+            "primary_user": {"type": "keyword"},
+            "proficiency_level": {"type": "keyword"},
+            "provider": {"type": "keyword"},
+            "provider_set": {"type": "keyword"},
+            "related_materials": {"type": "keyword"},
+            "short_name": {"type": "text"},
+            "subject": {
+		"type": "text",
+		"analyzer": "path-analyzer",
+		"search_analyzer": "keyword",
+		"fielddata": true
+	    },
+	    "sublevel": {"type": "keyword"},
+            "title": {"type": "text"},
+            "url": {"type": "keyword"},
+            "views_count": {"type": "long"},
+            "workflow_state": {"type": "keyword"},
+	    "doc_type": {"type": "keyword"},
+	    "collection_filter": {"type": "flattened", "index": false},
+	    "collection_subscriptions": {"type": "keyword"}
+	}
+    }
+}

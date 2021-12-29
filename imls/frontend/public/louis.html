@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Louis</title>
+  </head>
+  <body>
+    <script id="config" type="application/json">
+      {
+	  "indexes": [{"idx": "louis",
+                       "name": "Mine"},
+                      {"idx": "exchange",
+                       "name": "Shared"}],
+	  "boost": {
+	      "louis": 1.5
+	  },
+	  "agg_fields": {
+              "subject": {"label": "Subject", "limit": 50, "sep": "|"},
+              "media_formats": {"label": "Media Format", "limit": 10},
+              "ed_standards": {"label": "Education Standards",
+                               "limit": 100, "sep": "."}
+          }
+      }
+    </script>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
