@@ -96,7 +96,7 @@
         </div>
       </div>
       <div class="flex items-center">
-        <ResourcesList v-bind:database="filteredCourses" />
+        <ResourcesList v-bind:database="filteredCourses(filter, searchQuery)" />
       </div>
     </div>
   </div>
@@ -108,7 +108,7 @@ import ResourcesList from "../components/resourse/ResourcesList.vue";
 import Button from "../components/elements/Button.vue";
 import Select from "../components/elements/Select.vue";
 import Filters from '../components/elements/Filters.vue';
-import {ENTRY_POINT} from '../const.js'
+import { mapGetters } from 'vuex'
 
 export default {
   name: "CollectionDetails",
@@ -121,7 +121,6 @@ export default {
   },
   data() {
     return {
-      database: [],
       options: [
         { name: "All", id: 1, value: "all" },
         { name: "Last modified", id: 2, value: "last-modified" },
@@ -135,58 +134,16 @@ export default {
     };
   },
   mounted() {
-    fetch(ENTRY_POINT)
-      .then((response) => response.json())
-      .then((json) => {
-        this.database = json.courses;
-      });
+
   },
   methods: {
-    clickBtn() {
-      
-    },
+    clickBtn() {},
   },
   computed: {
-    filteredCourses() {
-      let filtered;
-      if (this.filter === "all") {
-        filtered = this.database;
-      }
-
-      if (this.searchQuery) {
-        const cleanedupQuery = this.searchQuery.trim().toLowerCase();
-        filtered = this.database
-          .map((el) => el)
-          .filter((item) => 
-            item.courseTitle.toLowerCase().includes(cleanedupQuery));
-      }
-
-    //TODO: Sort filtered base
-
-      if (this.filter === "last-modified") {
-        filtered = this.database
-          .map((el) => el)
-          .sort((a, b) => new Date(b.updated) - new Date(a.updated));
-      }
-
-      if (this.filter === "reviews") {
-        filtered = this.database
-          .map((el) => el)
-          .sort((a, b) => b.reviews - a.reviews);
-      }
-
-      if (this.filter === "title") {
-        filtered = this.database
-          .map((el) => el)
-          .sort((a, b) => a.courseTitle.localeCompare(b.courseTitle));
-      }
-
-      // if (this.filter === 'rating') {
-      //   filtered = this.database.map(el => el).sort((a,b) => a.rating - b.rating)
-      // }
-
-      return filtered;
+    courses() {
+      return this.$store.state.courses;
     },
+    ...mapGetters(["filteredCourses"])
   },
 };
 </script>
@@ -194,4 +151,3 @@ export default {
 <style src='../assets/styles/index.css'></style>
 <style lang="postcss">
 </style>
-

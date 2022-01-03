@@ -50,6 +50,10 @@ export default {
   methods: {
 
   },
+  //TODO: 
+  //- filter state for lists: New and Popular
+  //- Searchbar
+
   computed: {
     collections_by_category() {
       return this.$store.state.collections_by_category;

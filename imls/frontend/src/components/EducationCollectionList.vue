@@ -1,6 +1,6 @@
 <template>
   <div class="box-border overflow-y-hidden w-1250px h-530px p-0 list-none mx-0 my-auto mb-25px">
-    <ul class="flex flex-wrap gap-4 mb-25px">
+    <ul class="flex flex-wrap mb-25px">
 
       <li v-for="education_level in education_levels"
           v-bind:key="education_level.id"

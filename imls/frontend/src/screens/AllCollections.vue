@@ -117,7 +117,7 @@
                     class="checkbox-item mb-10px"
                   >
                     <label class="text-10px text-black pointer">
-                      <input type="checkbox" />
+                      <input :value="microsite.name" v-model="categories" type="checkbox" />
                       {{ microsite.name }}
                     </label>
                   </div>
@@ -288,8 +288,8 @@
 
         <ul class="flex flex-wrap mt-4 gap-4">
           <CollectionItemCard
-            v-for="collection in paginated_collections.collections"
-            :key="collection.id"
+            v-for="collection in filteredCollections(filter, searchQuery)"
+            :key="collection.id + Math.random()"
             v-bind:collection="collection"
           />
         </ul>
@@ -298,12 +298,14 @@
   </div>
 </template>
 
+
+
 <script>
 import SearchBar from '../components/elements/SearchBar.vue';
 import CollectionItemCard from '../components/collection/CollectionItemCard.vue'
 import Select from "../components/elements/Select.vue";
+import { mapGetters } from 'vuex'
 //import {ENTRY_POINT} from '../const.js'
-
 
 export default {
   name: 'AllCollections',
@@ -322,7 +324,8 @@ export default {
       active: false,
       activeEducation: false,
       filter: 'last-modified',
-      searchQuery: ''
+      searchQuery: '',
+      categories: [],
     }
   },
   methods: {
@@ -343,39 +346,27 @@ export default {
 
   },
   computed: {
+    //TODO: move function to the store.vuex
+    // filterData() {
+    //   let data = []
+    //   // if there are selected checkboxes
+    //   if (this.categories.length) {
+    //     // filtering data
+    //     data = this.$store.state.paginated_collections.collections.map((el) => el).filter(x => this.categories.indexOf(x.micrositeTitle.toString()) != -1)
+    //   } else {
+    //     // otherwise, we send all data from the array
+    //     data = this.$store.state.paginated_collections.collections
+    //   }
+    //   return data
+    // },
     paginated_collections() {
       return this.$store.state.paginated_collections
     },
     microsites() {
       return this.$store.state.microsites;
     },
-    //TODO: now we have no filtered collections
-    // filteredCourses() {
-    //   let filtered;
-    //   if (this.filter === "last-modified") {
-    //     filtered = this.database
-    //       .map((el) => el)
-    //       .sort((a, b) => new Date(b.updated) - new Date(a.updated));
-    //   }
 
-    //   if (this.searchQuery) {
-    //     const cleanedupQuery = this.searchQuery.trim().toLowerCase();
-    //     filtered = this.database
-    //       .map((el) => el)
-    //       .filter((item) =>
-    //         item.courseTitle.toLowerCase().includes(cleanedupQuery));
-    //   }
-
-    //   //TODO: Sort filtered base
-
-    //   if (this.filter === "reviews") {
-    //     filtered = this.database
-    //       .map((el) => el)
-    //       .sort((a, b) => b.reviews - a.reviews);
-    //   }
-
-    //   return filtered;
-    // },
+    ...mapGetters(["filteredCollections"])
   },
 }
 </script>

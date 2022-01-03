@@ -1,15 +1,15 @@
 {
 	"microsites": [
 		{
-			"id": 1,
 			"name": "OERC",
+			"id": 12,
 			"description": "Something",
 			"num_collections": 25,
 			"cover_img": "/static/imls/collections/23.jpg"
 		},
 		{
-			"id": 2,
 			"name": "LOUIS",
+			"id": 6,
 			"description": "Something",
 			"num_collections": 5,
 			"cover_img": "/static/imls/collections/17.jpg"
@@ -37,7 +37,7 @@
 		},
 		{
 			"name": "ATLAS",
-			"id": 6,
+			"id": 1,
 			"description": "Something",
 			"num_collections": 25,
 			"cover_img": "/static/imls/collections/12.jpg"
@@ -79,7 +79,7 @@
 		},
 		{
 			"name": "AZ CTE",
-			"id": 12,
+			"id": 2,
 			"cover_img": "/static/imls/collections/13.jpg"
 		},
 		{
@@ -300,7 +300,7 @@
 					"micrositeTitle": "OER Commons",
 					"id": 12,
 					"collectionTitle": "PheT Interactives",
-					"collectionThumbnail": "11.jpeg",
+					"collectionThumbnail": "11.jpg",
 					"resourcesNumber": 11,
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
@@ -822,7 +822,7 @@
 					"micrositeTitle": "OER Commons",
 					"id": 12,
 					"collectionTitle": "PheT Interactives",
-					"collectionThumbnail": "11.jpeg",
+					"collectionThumbnail": "11.jpg",
 					"resourcesNumber": 11,
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
@@ -1346,7 +1346,7 @@
 				"micrositeTitle": "OER Commons",
 				"id": 12,
 				"collectionTitle": "PheT Interactives",
-				"collectionThumbnail": "11.jpeg",
+				"collectionThumbnail": "11.jpg",
 				"resourcesNumber": 11,
 				"updated": "2021-07-01T18:25:43.511Z",
 				"reviews": 17,
@@ -1750,5 +1750,105 @@
 				"check": true
 			}
 		]
-	}
+	},
+	"courses": [
+    {
+      "site": "VIVA",
+      "courseTitle": "ART 100 - Art Apprecaition",
+      "updated": "2020-06-23T18:25:43.511Z",
+      "stars": 4,
+      "reviews": 10,
+      "subject": "Art History",
+      "materialType": "courses",
+      "level": "Community College/Lower Division",
+      "accessibility": "Partially Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Only Sharing Permitted",
+      "licenseIndex": "cc-by-nd"
+    },
+    {
+      "site": "The Saylor foundation",
+      "courseTitle": "Art Apprecaition and techniques",
+      "updated": "2021-07-01T18:25:43.511Z",
+      "stars": 4,
+      "reviews": 100,
+      "subject": "Art History",
+      "materialType": "textbooks",
+      "level": "Community College/Lower Division, College/Upper Division",
+      "accessibility": "Accessible",
+      "overview": "This courese is an exploration of visual art forms and thir cultural connections for the student with...",
+      "licenseType": "Conditional Remix & Share Permitted",
+      "licenseIndex": "cc-by-nc-sa"
+    },
+    {
+      "site": "MOST",
+      "courseTitle": "Cats",
+      "updated": "2019-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 0,
+      "subject": "Cats History",
+      "materialType": "modules",
+      "level": "Community College/Lower Division",
+      "accessibility": "Partially Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Read the Fine Print",
+      "licenseIndex": "read"
+    },
+    {
+      "site": "WI",
+      "courseTitle": "Dogs",
+      "updated": "2009-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 99,
+      "subject": "Dogs History",
+      "materialType": "readings",
+      "level": "Community College/Lower Division",
+      "accessibility": "Partially Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Read the Fine Print",
+      "licenseIndex": "read"
+    },
+    {
+      "site": "VIDE",
+      "courseTitle": "Parrots",
+      "updated": "2007-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 9,
+      "subject": "Parrots History",
+      "materialType": "activity",
+      "level": "Community College/Lower Division",
+      "accessibility": "Not Evaluated",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Conditional Remix & Share Permitted",
+      "licenseIndex": "cc-by-nc-sa"
+    },
+    {
+      "site": "LOUSE",
+      "courseTitle": "Hourse",
+      "updated": "2017-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 91,
+      "subject": "Hourse History",
+      "materialType": "lecture",
+      "level": "Community College/Lower Division",
+      "accessibility": "Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Only Sharing Permitted",
+      "licenseIndex": "cc-by-nd"
+    },
+    {
+      "site": "OH",
+      "courseTitle": "Mouse",
+      "updated": "2010-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 1,
+      "subject": "Mouse History",
+      "materialType": "syllabus",
+      "level": "Community College/Lower Division",
+      "accessibility": "Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Unrestricted Use",
+      "licenseIndex": "cc-by"
+    }
+  ]
 }
