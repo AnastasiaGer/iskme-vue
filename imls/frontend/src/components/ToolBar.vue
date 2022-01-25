@@ -16,8 +16,8 @@
           >Manage your Account</a>
         </div>
       </div>
-      <div class="border-b">
-        <router-link :to="{ name: 'search' }" class="px-4 py-2 hover:bg-gray-100 flex">
+      <div class="border-b" role="menubar">
+        <router-link :to="{ name: 'search' }" class="px-4 py-2 hover:bg-gray-100 flex" role="menuitem">
           <div class="text-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@
             <p class="text-xs text-gray-500">Search for resources/collections</p>
           </div>
         </router-link>
-        <router-link :to="{ name: 'home' }" class="px-4 py-2 hover:bg-gray-100 flex">
+        <router-link :to="{ name: 'home' }" class="px-4 py-2 hover:bg-gray-100 flex" role="menuitem">
           <div class="text-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@
             <p class="text-xs text-gray-500">Home is ...</p>
           </div>
         </router-link>
-        <router-link :to="{ name: 'my-library' }" class="px-4 py-2 hover:bg-gray-100 flex">
+        <router-link :to="{ name: 'my-library' }" class="px-4 py-2 hover:bg-gray-100 flex" role="menuitem">
           <div class="text-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@
             <p class="text-xs text-gray-500">My Stuff</p>
           </div>
         </router-link>
-        <router-link :to="{ name: 'browse' }" class="px-4 py-2 hover:bg-gray-100 flex">
+        <router-link :to="{ name: 'browse' }" class="px-4 py-2 hover:bg-gray-100 flex" role="menuitem">
           <div class="text-gray-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@
             <p class="text-xs text-gray-500">Meander through stuff</p>
           </div>
         </router-link>
-        <router-link :to="{ name: 'browse-collections' }" class="px-4 py-2 hover:bg-gray-100 flex">
+        <router-link :to="{ name: 'browse-collections' }" class="px-4 py-2 hover:bg-gray-100 flex" aria-current="page" role="menuitem">
           <div class="text-gray-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@
             <p class="text-xs text-gray-500">...</p>
           </div>
         </router-link>
-        <router-link :to="{ name: 'map' }" class="px-4 py-2 hover:bg-gray-100 flex">
+        <router-link :to="{ name: 'map' }" class="px-4 py-2 hover:bg-gray-100 flex" role="menuitem">
           <div class="text-gray-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@
             <p class="text-xs text-gray-500">Manage taxonomy mappings</p>
           </div>
         </router-link>
-        <router-link :to="{ name: 'settings' }" href="#" class="px-4 py-2 hover:bg-gray-100 flex">
+        <router-link :to="{ name: 'settings' }" href="#" class="px-4 py-2 hover:bg-gray-100 flex" role="menuitem">
           <div class="text-gray-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"

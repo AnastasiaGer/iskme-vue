@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="box-border flex overflow-x-hidden min-h-300px mx-0 my-auto bg-slate-200 font-sans text-slate-700">
+  <div id="app" role="main" class="box-border flex overflow-x-hidden min-h-300px mx-0 my-auto bg-slate-200 font-sans text-slate-700">
     <tool-bar class="flex-initial"/>
     <router-view class="flex-1"/>
   </div>

@@ -2,6 +2,7 @@
   <select
     v-model="selectedOption"
     @input="event => { $emit('input', event.target.value) }"
+    aria-label="Sort"
     class="rounded-full p-2 text-sm"
   >
     <option selected disabled>{{ defaultOption }}</option>

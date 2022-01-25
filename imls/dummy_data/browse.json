@@ -1,7 +1,7 @@
 {
 	"microsites": [
 		{
-			"name": "OERC",
+			"name": "OER Commons",
 			"id": 12,
 			"description": "Something",
 			"num_collections": 25,
@@ -152,8 +152,8 @@
 			"name": "Higher Ed",
 			"levels": [
 				"Lower Division / CC",
-				"Upper Division / College",
-				"Graduate / Professional"
+				"Upper Division / College / Upper Division",
+				"Graduate / Professional / Professional"
 			],
 			"num_collections": 55
 		},
@@ -188,6 +188,7 @@
 			"collections":  [
 				{
 					"micrositeTitle": "ATLAS",
+					"collectionId": 1,
 					"id": 1,
 					"collectionTitle": "Discover CCSS Aligned English Language Arts",
 					"collectionThumbnail": "1.jpeg",
@@ -195,10 +196,12 @@
 					"updated": "2020-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 9,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "AZ CTE",
+					"collectionId": 2,
 					"id": 2,
 					"collectionTitle": "Discover CCSS Aligned Mathematics",
 					"collectionThumbnail": "2.jpeg",
@@ -206,10 +209,12 @@
 					"updated": "2020-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 0,
-					"check": true
+					"check": true,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "CT",
+					"collectionId": 3,
 					"id": 3,
 					"collectionTitle": "NGSS",
 					"collectionThumbnail": "3.png",
@@ -217,10 +222,12 @@
 					"updated": "2019-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "INFOHIO",
+					"collectionId": 4,
 					"id": 5,
 					"collectionTitle": "STEAM",
 					"collectionThumbnail": "4.jpeg",
@@ -228,10 +235,12 @@
 					"updated": "2021-10-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 3,
-					"check": true
+					"check": true,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "LOUIS",
+					"collectionId": 5,
 					"id": 6,
 					"collectionTitle": "TeachEngineering",
 					"collectionThumbnail": "5.png",
@@ -239,10 +248,12 @@
 					"updated": "2020-11-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "MI",
+					"collectionId": 6,
 					"id": 7,
 					"collectionTitle": "PheT Interactives",
 					"collectionThumbnail": "6.jpeg",
@@ -250,10 +261,12 @@
 					"updated": "2020-06-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 0,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "MOST",
+					"collectionId": 7,
 					"id": 8,
 					"collectionTitle": "Garden-Based Learning",
 					"collectionThumbnail": "7.jpeg",
@@ -261,10 +274,12 @@
 					"updated": "2021-11-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "NCCCS",
+					"collectionId": 8,
 					"id": 9,
 					"collectionTitle": "Folger Shakespeare Library",
 					"collectionThumbnail": "8.jpeg",
@@ -272,10 +287,12 @@
 					"updated": "2021-10-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 2,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "NCDPI",
+					"collectionId": 9,
 					"id": 10,
 					"collectionTitle": "Career and Technical Education (CTE)",
 					"collectionThumbnail": "9.jpeg",
@@ -283,10 +300,12 @@
 					"updated": "2021-09-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 2,
-					"check": true
+					"check": true,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "NHC",
+					"collectionId": 10,
 					"id": 11,
 					"collectionTitle": "Game-Based Learning",
 					"collectionThumbnail": "10.png",
@@ -294,10 +313,12 @@
 					"updated": "2020-05-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 5,
-					"check": true
+					"check": true,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "OER Commons",
+					"collectionId": 11,
 					"id": 12,
 					"collectionTitle": "PheT Interactives",
 					"collectionThumbnail": "11.jpg",
@@ -305,10 +326,12 @@
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "WI",
+					"collectionId": 12,
 					"id": 21,
 					"collectionTitle": "Lorem Ipsum",
 					"collectionThumbnail": "12.jpg",
@@ -316,10 +339,12 @@
 					"updated": "2020-01-04T18:25:43.511Z",
 					"reviews": 101,
 					"num_alerts": 13,
-					"check": false
+					"check": false,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "VIVA",
+					"collectionId": 13,
 					"id": 20,
 					"collectionTitle": "Lorem ipsum dolor sit amet",
 					"collectionThumbnail": "13.jpg",
@@ -327,10 +352,12 @@
 					"updated": "2020-11-24T18:25:43.511Z",
 					"reviews": 104,
 					"num_alerts": 4,
-					"check": true
+					"check": true,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "VIDE",
+					"collectionId": 14,
 					"id": 19,
 					"collectionTitle": "What is Lorem Ipsum?",
 					"collectionThumbnail": "14.jpg",
@@ -338,10 +365,12 @@
 					"updated": "2019-02-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "VADOE",
+					"collectionId": 15,	
 					"id": 18,
 					"collectionTitle": "From its medieval origins",
 					"collectionThumbnail": "15.jpg",
@@ -349,10 +378,12 @@
 					"updated": "2021-12-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "UEN",
+					"collectionId": 16,
 					"id": 17,
 					"collectionTitle": "HISTORY, PURPOSE AND USAGE",
 					"collectionThumbnail": "16.jpg",
@@ -360,10 +391,12 @@
 					"updated": "2020-09-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 12,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "THECB",
+					"collectionId": 17,
 					"id": 16,
 					"collectionTitle": "Lorem ipsum dolor sit amet",
 					"collectionThumbnail": "17.jpg",
@@ -371,10 +404,12 @@
 					"updated": "2020-03-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "SWS",
+					"collectionId": 18,
 					"id": 15,
 					"collectionTitle": "The purpose of lorem ipsum",
 					"collectionThumbnail": "18.jpg",
@@ -382,10 +417,12 @@
 					"updated": "2021-04-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 0,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "SHMS",
+					"collectionId": 19,
 					"id": 14,
 					"collectionTitle": "The passage experienced",
 					"collectionThumbnail": "19.jpg",
@@ -393,10 +430,12 @@
 					"updated": "2021-05-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 5,
-					"check": true
+					"check": true,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "OER Commons",
+					"collectionId": 20,
 					"id": 12,
 					"collectionTitle": "Origins and Discovery",
 					"collectionThumbnail": "20.jpg",
@@ -404,10 +443,12 @@
 					"updated": "2021-07-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "NHC",
+					"collectionId": 21,
 					"id": 11,
 					"collectionTitle": "Lorem ipsum began as scrambled",
 					"collectionThumbnail": "21.jpg",
@@ -415,10 +456,12 @@
 					"updated": "2020-07-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "NCDPI",
+					"collectionId": 22,
 					"id": 10,
 					"collectionTitle": "HEDONIST ROOTS",
 					"collectionThumbnail": "22.jpg",
@@ -426,10 +469,12 @@
 					"updated": "2021-08-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "NCCCS",
+					"collectionId": 23,
 					"id": 9,
 					"collectionTitle": "Until recently",
 					"collectionThumbnail": "23.jpg",
@@ -437,10 +482,12 @@
 					"updated": "2021-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 2,
-					"check": true
+					"check": true,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "MOST",
+					"collectionId": 24,
 					"id": 8,
 					"collectionTitle": "The placeholder text",
 					"collectionThumbnail": "24.jpg",
@@ -448,10 +495,12 @@
 					"updated": "2021-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "MI",
+					"collectionId": 25,
 					"id": 7,
 					"collectionTitle": "Before & After",
 					"collectionThumbnail": "25.jpg",
@@ -459,10 +508,12 @@
 					"updated": "2021-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 2,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "LOUIS",
+					"collectionId": 26,
 					"id": 6,
 					"collectionTitle": "Richard McClintock,",
 					"collectionThumbnail": "26.jpg",
@@ -470,10 +521,12 @@
 					"updated": "2021-10-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "INFOHIO",
+					"collectionId": 27,
 					"id": 5,
 					"collectionTitle": "McClintock's eye for detail",
 					"collectionThumbnail": "27.jpg",
@@ -481,10 +534,12 @@
 					"updated": "2021-11-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "CUNY",
+					"collectionId": 28,
 					"id": 4,
 					"collectionTitle": "Neque porro quisquam est",
 					"collectionThumbnail": "28.jpg",
@@ -492,10 +547,12 @@
 					"updated": "2021-06-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 0,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "CT",
+					"collectionId": 29,
 					"id": 3,
 					"collectionTitle": "Creation timelines",
 					"collectionThumbnail": "29.jpg",
@@ -503,10 +560,12 @@
 					"updated": "2021-11-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "AZ CTE",
+					"collectionId": 30,
 					"id": 2,
 					"collectionTitle": "REMIXING A CLASSIC",
 					"collectionThumbnail": "30.jpg",
@@ -514,10 +573,12 @@
 					"updated": "2021-10-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "ATLAS",
+					"collectionId": 31,
 					"id": 1,
 					"collectionTitle": "It's difficult to find examples of lorem ipsum",
 					"collectionThumbnail": "31.jpg",
@@ -525,10 +586,12 @@
 					"updated": "2021-09-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 4,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "WI",
+					"collectionId": 32,
 					"id": 21,
 					"collectionTitle": "Cecil Adams reasoned",
 					"collectionThumbnail": "32.jpg",
@@ -536,10 +599,12 @@
 					"updated": "2021-05-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "VIVA",
+					"collectionId": 33,
 					"id": 20,
 					"collectionTitle": "Meaning of Lorem Ipsum",
 					"collectionThumbnail": "33.jpg",
@@ -547,10 +612,12 @@
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "VIDE",
+					"collectionId": 34,
 					"id": 19,
 					"collectionTitle": "Lorem ipsum was purposefully",
 					"collectionThumbnail": "34.jpg",
@@ -558,10 +625,12 @@
 					"updated": "2021-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 4,
-					"check": true
+					"check": true,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "VADOE",
+					"collectionId": 35,
 					"id": 18,
 					"collectionTitle": "INTERPRETING NONSENSE",
 					"collectionThumbnail": "35.jpg",
@@ -569,10 +638,12 @@
 					"updated": "2021-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "UEN",
+					"collectionId": 36,
 					"id": 17,
 					"collectionTitle": "Don't bother typing “lorem ipsum”",
 					"collectionThumbnail": "36.jpg",
@@ -580,10 +651,12 @@
 					"updated": "2021-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "THECB",
+					"collectionId": 37,
 					"id": 16,
 					"collectionTitle": "Lorem ipsum dolor sit amet",
 					"collectionThumbnail": "37.jpg",
@@ -591,10 +664,12 @@
 					"updated": "2021-10-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "SWS",
+					"collectionId": 38,
 					"id": 15,
 					"collectionTitle": "Boparai's version",
 					"collectionThumbnail": "38.jpg",
@@ -602,10 +677,12 @@
 					"updated": "2021-11-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "SHMS",
+					"collectionId": 39,
 					"id": 14,
 					"collectionTitle": "Nick Richardson described the translation",
 					"collectionThumbnail": "39.jpg",
@@ -613,10 +690,12 @@
 					"updated": "2021-06-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 4,
-					"check": false
+					"check": false,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "OH",
+					"collectionId": 40,
 					"id": 13,
 					"collectionTitle": "Lorem ipsum was popularized",
 					"collectionThumbnail": "40.jpg",
@@ -624,10 +703,12 @@
 					"updated": "2021-11-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "OER Commons",
+					"collectionId": 41,
 					"id": 12,
 					"collectionTitle": "DIGITAL IPSUM",
 					"collectionThumbnail": "41.jpg",
@@ -635,10 +716,12 @@
 					"updated": "2021-10-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "NCDPI",
+					"collectionId": 42,
 					"id": 10,
 					"collectionTitle": "The decade that brought us Star Trek",
 					"collectionThumbnail": "42.jpg",
@@ -646,10 +729,12 @@
 					"updated": "2021-09-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "NHC",
+					"collectionId": 43,
 					"id": 11,
 					"collectionTitle": "The French lettering company",
 					"collectionThumbnail": "43.jpg",
@@ -657,10 +742,12 @@
 					"updated": "2021-05-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 3,
-					"check": false
+					"check": false,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "NCCCS",
+					"collectionId": 44,
 					"id": 9,
 					"collectionTitle": "Aldus Corporation",
 					"collectionThumbnail": "44.jpg",
@@ -668,10 +755,12 @@
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "MOST",
+					"collectionId": 45,
 					"id": 8,
 					"collectionTitle": "DESIGN OR (DIS)CONTENT",
 					"collectionThumbnail": "45.jpg",
@@ -679,10 +768,12 @@
 					"updated": "2021-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "MI",
+					"collectionId": 46,
 					"id": 7,
 					"collectionTitle": "Translation by H. Rackham",
 					"collectionThumbnail": "46.jpg",
@@ -690,10 +781,12 @@
 					"updated": "2021-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 2,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "LOUIS",
+					"collectionId": 47,
 					"id": 6,
 					"collectionTitle": "Original Latin text",
 					"collectionThumbnail": "47.jpg",
@@ -701,7 +794,8 @@
 					"updated": "2021-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "College / Upper Division"
 				}
 			]
 		},
@@ -717,7 +811,8 @@
 					"updated": "2020-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 9,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "AZ CTE",
@@ -728,7 +823,8 @@
 					"updated": "2020-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 0,
-					"check": true
+					"check": true,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "CT",
@@ -739,7 +835,8 @@
 					"updated": "2019-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "INFOHIO",
@@ -750,7 +847,8 @@
 					"updated": "2021-10-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 3,
-					"check": true
+					"check": true,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "LOUIS",
@@ -761,7 +859,8 @@
 					"updated": "2020-11-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "MI",
@@ -772,7 +871,8 @@
 					"updated": "2020-06-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 0,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "MOST",
@@ -783,7 +883,8 @@
 					"updated": "2021-11-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "NCCCS",
@@ -794,7 +895,8 @@
 					"updated": "2021-10-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 2,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "NCDPI",
@@ -805,7 +907,8 @@
 					"updated": "2021-09-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 2,
-					"check": true
+					"check": true,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "NHC",
@@ -816,7 +919,8 @@
 					"updated": "2020-05-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 5,
-					"check": true
+					"check": true,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "OER Commons",
@@ -827,7 +931,8 @@
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "WI",
@@ -838,7 +943,8 @@
 					"updated": "2020-01-04T18:25:43.511Z",
 					"reviews": 101,
 					"num_alerts": 13,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "VIVA",
@@ -849,7 +955,8 @@
 					"updated": "2020-11-24T18:25:43.511Z",
 					"reviews": 104,
 					"num_alerts": 4,
-					"check": true
+					"check": true,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "VIDE",
@@ -860,7 +967,8 @@
 					"updated": "2019-02-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "VADOE",
@@ -871,7 +979,8 @@
 					"updated": "2021-12-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "UEN",
@@ -882,7 +991,8 @@
 					"updated": "2020-09-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 12,
-					"check": false
+					"check": false,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "THECB",
@@ -893,7 +1003,8 @@
 					"updated": "2020-03-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "SWS",
@@ -904,7 +1015,8 @@
 					"updated": "2021-04-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 0,
-					"check": false
+					"check": false,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "SHMS",
@@ -915,7 +1027,8 @@
 					"updated": "2021-05-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 5,
-					"check": true
+					"check": true,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "OER Commons",
@@ -926,7 +1039,8 @@
 					"updated": "2021-07-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "NHC",
@@ -937,7 +1051,8 @@
 					"updated": "2020-07-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "Adult Education"
 				},
 				{
 					"micrositeTitle": "NCDPI",
@@ -948,7 +1063,8 @@
 					"updated": "2021-08-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "NCCCS",
@@ -959,7 +1075,8 @@
 					"updated": "2021-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 2,
-					"check": true
+					"check": true,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "MOST",
@@ -970,7 +1087,8 @@
 					"updated": "2021-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Preschool"
 				},
 				{
 					"micrositeTitle": "MI",
@@ -981,7 +1099,8 @@
 					"updated": "2021-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 2,
-					"check": false
+					"check": false,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "LOUIS",
@@ -992,7 +1111,8 @@
 					"updated": "2021-10-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "INFOHIO",
@@ -1003,7 +1123,8 @@
 					"updated": "2021-11-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Lower Primary"
 				},
 				{
 					"micrositeTitle": "CUNY",
@@ -1014,7 +1135,8 @@
 					"updated": "2021-06-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 0,
-					"check": false
+					"check": false,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "CT",
@@ -1025,7 +1147,8 @@
 					"updated": "2021-11-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "AZ CTE",
@@ -1036,7 +1159,8 @@
 					"updated": "2021-10-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Upper Primary"
 				},
 				{
 					"micrositeTitle": "ATLAS",
@@ -1047,7 +1171,8 @@
 					"updated": "2021-09-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 4,
-					"check": false
+					"check": false,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "WI",
@@ -1058,7 +1183,8 @@
 					"updated": "2021-05-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "VIVA",
@@ -1069,7 +1195,8 @@
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Middle School"
 				},
 				{
 					"micrositeTitle": "VIDE",
@@ -1080,7 +1207,8 @@
 					"updated": "2021-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 4,
-					"check": true
+					"check": true,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "VADOE",
@@ -1091,7 +1219,8 @@
 					"updated": "2021-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "UEN",
@@ -1102,7 +1231,8 @@
 					"updated": "2021-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 5,
-					"check": false
+					"check": false,
+					"educationLevel": "High School"
 				},
 				{
 					"micrositeTitle": "THECB",
@@ -1113,7 +1243,8 @@
 					"updated": "2021-10-13T18:25:43.511Z",
 					"reviews": 108,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "SWS",
@@ -1124,7 +1255,8 @@
 					"updated": "2021-11-19T18:25:43.511Z",
 					"reviews": 130,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "SHMS",
@@ -1135,7 +1267,8 @@
 					"updated": "2021-06-18T18:25:43.511Z",
 					"reviews": 120,
 					"num_alerts": 4,
-					"check": false
+					"check": false,
+					"educationLevel": "Community College / Lower Division"
 				},
 				{
 					"micrositeTitle": "OH",
@@ -1146,7 +1279,8 @@
 					"updated": "2021-11-28T18:25:43.511Z",
 					"reviews": 200,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "OER Commons",
@@ -1157,7 +1291,8 @@
 					"updated": "2021-10-06T18:25:43.511Z",
 					"reviews": 290,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "NCDPI",
@@ -1168,7 +1303,8 @@
 					"updated": "2021-09-04T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "College / Upper Division"
 				},
 				{
 					"micrositeTitle": "NHC",
@@ -1179,7 +1315,8 @@
 					"updated": "2021-05-02T18:25:43.511Z",
 					"reviews": 9,
 					"num_alerts": 3,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "NCCCS",
@@ -1190,7 +1327,8 @@
 					"updated": "2021-07-01T18:25:43.511Z",
 					"reviews": 17,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "MOST",
@@ -1201,7 +1339,8 @@
 					"updated": "2021-05-04T18:25:43.511Z",
 					"reviews": 10,
 					"num_alerts": 1,
-					"check": false
+					"check": false,
+					"educationLevel": "Graduate / Professional"
 				},
 				{
 					"micrositeTitle": "MI",
@@ -1212,7 +1351,8 @@
 					"updated": "2021-12-24T18:25:43.511Z",
 					"reviews": 100,
 					"num_alerts": 2,
-					"check": false
+					"check": false,
+					"educationLevel": "Career Technical"
 				},
 				{
 					"micrositeTitle": "LOUIS",
@@ -1223,7 +1363,8 @@
 					"updated": "2021-04-14T18:25:43.511Z",
 					"reviews": 170,
 					"num_alerts": 1,
-					"check": true
+					"check": true,
+					"educationLevel": "Career Technical"
 				}
 			]
 		}
@@ -1241,7 +1382,8 @@
 				"updated": "2020-05-04T18:25:43.511Z",
 				"reviews": 10,
 				"num_alerts": 9,
-				"check": false
+				"check": false,
+				"educationLevel": "Preschool"
 			},
 			{
 				"micrositeTitle": "AZ CTE",
@@ -1252,7 +1394,8 @@
 				"updated": "2020-12-24T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 0,
-				"check": true
+				"check": true,
+				"educationLevel": "Lower Primary"
 			},
 			{
 				"micrositeTitle": "CT",
@@ -1263,7 +1406,8 @@
 				"updated": "2019-04-14T18:25:43.511Z",
 				"reviews": 170,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Upper Primary"
 			},
 			{
 				"micrositeTitle": "INFOHIO",
@@ -1274,7 +1418,8 @@
 				"updated": "2021-10-13T18:25:43.511Z",
 				"reviews": 108,
 				"num_alerts": 3,
-				"check": true
+				"check": true,
+				"educationLevel": "Middle School"
 			},
 			{
 				"micrositeTitle": "LOUIS",
@@ -1285,7 +1430,8 @@
 				"updated": "2020-11-19T18:25:43.511Z",
 				"reviews": 130,
 				"num_alerts": 5,
-				"check": false
+				"check": false,
+				"educationLevel": "High School"
 			},
 			{
 				"micrositeTitle": "MI",
@@ -1296,7 +1442,8 @@
 				"updated": "2020-06-18T18:25:43.511Z",
 				"reviews": 120,
 				"num_alerts": 0,
-				"check": false
+				"check": false,
+				"educationLevel": "High School"
 			},
 			{
 				"micrositeTitle": "MOST",
@@ -1307,7 +1454,8 @@
 				"updated": "2021-11-28T18:25:43.511Z",
 				"reviews": 200,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Community College / Lower Division"
 			},
 			{
 				"micrositeTitle": "NCCCS",
@@ -1318,7 +1466,8 @@
 				"updated": "2021-10-06T18:25:43.511Z",
 				"reviews": 290,
 				"num_alerts": 2,
-				"check": false
+				"check": false,
+				"educationLevel": "Community College / Lower Division"
 			},
 			{
 				"micrositeTitle": "NCDPI",
@@ -1329,7 +1478,8 @@
 				"updated": "2021-09-04T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 2,
-				"check": true
+				"check": true,
+				"educationLevel": "Community College / Lower Division"
 			},
 			{
 				"micrositeTitle": "NHC",
@@ -1340,7 +1490,8 @@
 				"updated": "2020-05-02T18:25:43.511Z",
 				"reviews": 9,
 				"num_alerts": 5,
-				"check": true
+				"check": true,
+				"educationLevel": "College / Upper Division"
 			},
 			{
 				"micrositeTitle": "OER Commons",
@@ -1351,7 +1502,8 @@
 				"updated": "2021-07-01T18:25:43.511Z",
 				"reviews": 17,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "College / Upper Division"
 			},
 			{
 				"micrositeTitle": "WI",
@@ -1362,7 +1514,8 @@
 				"updated": "2020-01-04T18:25:43.511Z",
 				"reviews": 101,
 				"num_alerts": 13,
-				"check": false
+				"check": false,
+				"educationLevel": "College / Upper Division"
 			},
 			{
 				"micrositeTitle": "VIVA",
@@ -1373,7 +1526,8 @@
 				"updated": "2020-11-24T18:25:43.511Z",
 				"reviews": 104,
 				"num_alerts": 4,
-				"check": true
+				"check": true,
+				"educationLevel": "Graduate / Professional"
 			},
 			{
 				"micrositeTitle": "VIDE",
@@ -1384,7 +1538,8 @@
 				"updated": "2019-02-14T18:25:43.511Z",
 				"reviews": 170,
 				"num_alerts": 5,
-				"check": false
+				"check": false,
+				"educationLevel": "Graduate / Professional"
 			},
 			{
 				"micrositeTitle": "VADOE",
@@ -1395,7 +1550,8 @@
 				"updated": "2021-12-13T18:25:43.511Z",
 				"reviews": 108,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Graduate / Professional"
 			},
 			{
 				"micrositeTitle": "UEN",
@@ -1406,7 +1562,8 @@
 				"updated": "2020-09-19T18:25:43.511Z",
 				"reviews": 130,
 				"num_alerts": 12,
-				"check": false
+				"check": false,
+				"educationLevel": "Career Technical"
 			},
 			{
 				"micrositeTitle": "THECB",
@@ -1417,7 +1574,8 @@
 				"updated": "2020-03-18T18:25:43.511Z",
 				"reviews": 120,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Career Technical"
 			},
 			{
 				"micrositeTitle": "SWS",
@@ -1428,7 +1586,8 @@
 				"updated": "2021-04-28T18:25:43.511Z",
 				"reviews": 200,
 				"num_alerts": 0,
-				"check": false
+				"check": false,
+				"educationLevel": "Career Technical"
 			},
 			{
 				"micrositeTitle": "SHMS",
@@ -1439,7 +1598,8 @@
 				"updated": "2021-05-06T18:25:43.511Z",
 				"reviews": 290,
 				"num_alerts": 5,
-				"check": true
+				"check": true,
+				"educationLevel": "Adult Education"
 			},
 			{
 				"micrositeTitle": "OER Commons",
@@ -1450,7 +1610,8 @@
 				"updated": "2021-07-04T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Adult Education"
 			},
 			{
 				"micrositeTitle": "NHC",
@@ -1461,7 +1622,8 @@
 				"updated": "2020-07-02T18:25:43.511Z",
 				"reviews": 9,
 				"num_alerts": 5,
-				"check": false
+				"check": false,
+				"educationLevel": "Adult Education"
 			},
 			{
 				"micrositeTitle": "NCDPI",
@@ -1472,7 +1634,8 @@
 				"updated": "2021-08-01T18:25:43.511Z",
 				"reviews": 17,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Preschool"
 			},
 			{
 				"micrositeTitle": "NCCCS",
@@ -1483,7 +1646,8 @@
 				"updated": "2021-05-04T18:25:43.511Z",
 				"reviews": 10,
 				"num_alerts": 2,
-				"check": true
+				"check": true,
+				"educationLevel": "Preschool"
 			},
 			{
 				"micrositeTitle": "MOST",
@@ -1494,7 +1658,8 @@
 				"updated": "2021-12-24T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Preschool"
 			},
 			{
 				"micrositeTitle": "MI",
@@ -1505,7 +1670,8 @@
 				"updated": "2021-04-14T18:25:43.511Z",
 				"reviews": 170,
 				"num_alerts": 2,
-				"check": false
+				"check": false,
+				"educationLevel": "Lower Primary"
 			},
 			{
 				"micrositeTitle": "LOUIS",
@@ -1516,7 +1682,8 @@
 				"updated": "2021-10-13T18:25:43.511Z",
 				"reviews": 108,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "Lower Primary"
 			},
 			{
 				"micrositeTitle": "INFOHIO",
@@ -1527,7 +1694,8 @@
 				"updated": "2021-11-19T18:25:43.511Z",
 				"reviews": 130,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Lower Primary"
 			},
 			{
 				"micrositeTitle": "CUNY",
@@ -1538,7 +1706,8 @@
 				"updated": "2021-06-18T18:25:43.511Z",
 				"reviews": 120,
 				"num_alerts": 0,
-				"check": false
+				"check": false,
+				"educationLevel": "Upper Primary"
 			},
 			{
 				"micrositeTitle": "CT",
@@ -1549,7 +1718,8 @@
 				"updated": "2021-11-28T18:25:43.511Z",
 				"reviews": 200,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "Upper Primary"
 			},
 			{
 				"micrositeTitle": "AZ CTE",
@@ -1560,7 +1730,8 @@
 				"updated": "2021-10-06T18:25:43.511Z",
 				"reviews": 290,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Upper Primary"
 			},
 			{
 				"micrositeTitle": "ATLAS",
@@ -1571,7 +1742,8 @@
 				"updated": "2021-09-04T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 4,
-				"check": false
+				"check": false,
+				"educationLevel": "Middle School"
 			},
 			{
 				"micrositeTitle": "WI",
@@ -1582,7 +1754,8 @@
 				"updated": "2021-05-02T18:25:43.511Z",
 				"reviews": 9,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "Middle School"
 			},
 			{
 				"micrositeTitle": "VIVA",
@@ -1593,7 +1766,8 @@
 				"updated": "2021-07-01T18:25:43.511Z",
 				"reviews": 17,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Middle School"
 			},
 			{
 				"micrositeTitle": "VIDE",
@@ -1604,7 +1778,8 @@
 				"updated": "2021-05-04T18:25:43.511Z",
 				"reviews": 10,
 				"num_alerts": 4,
-				"check": true
+				"check": true,
+				"educationLevel": "High School"
 			},
 			{
 				"micrositeTitle": "VADOE",
@@ -1615,7 +1790,8 @@
 				"updated": "2021-12-24T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "High School"
 			},
 			{
 				"micrositeTitle": "UEN",
@@ -1626,7 +1802,8 @@
 				"updated": "2021-04-14T18:25:43.511Z",
 				"reviews": 170,
 				"num_alerts": 5,
-				"check": false
+				"check": false,
+				"educationLevel": "High School"
 			},
 			{
 				"micrositeTitle": "THECB",
@@ -1637,7 +1814,8 @@
 				"updated": "2021-10-13T18:25:43.511Z",
 				"reviews": 108,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "Community College / Lower Division"
 			},
 			{
 				"micrositeTitle": "SWS",
@@ -1648,7 +1826,8 @@
 				"updated": "2021-11-19T18:25:43.511Z",
 				"reviews": 130,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Community College / Lower Division"
 			},
 			{
 				"micrositeTitle": "SHMS",
@@ -1659,7 +1838,8 @@
 				"updated": "2021-06-18T18:25:43.511Z",
 				"reviews": 120,
 				"num_alerts": 4,
-				"check": false
+				"check": false,
+				"educationLevel": "Community College / Lower Division"
 			},
 			{
 				"micrositeTitle": "OH",
@@ -1670,7 +1850,8 @@
 				"updated": "2021-11-28T18:25:43.511Z",
 				"reviews": 200,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "College / Upper Division"
 			},
 			{
 				"micrositeTitle": "OER Commons",
@@ -1681,7 +1862,8 @@
 				"updated": "2021-10-06T18:25:43.511Z",
 				"reviews": 290,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "College / Upper Division"
 			},
 			{
 				"micrositeTitle": "NCDPI",
@@ -1692,7 +1874,8 @@
 				"updated": "2021-09-04T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "College / Upper Division"
 			},
 			{
 				"micrositeTitle": "NHC",
@@ -1703,7 +1886,8 @@
 				"updated": "2021-05-02T18:25:43.511Z",
 				"reviews": 9,
 				"num_alerts": 3,
-				"check": false
+				"check": false,
+				"educationLevel": "Graduate / Professional"
 			},
 			{
 				"micrositeTitle": "NCCCS",
@@ -1714,7 +1898,8 @@
 				"updated": "2021-07-01T18:25:43.511Z",
 				"reviews": 17,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "Graduate / Professional"
 			},
 			{
 				"micrositeTitle": "MOST",
@@ -1725,7 +1910,8 @@
 				"updated": "2021-05-04T18:25:43.511Z",
 				"reviews": 10,
 				"num_alerts": 1,
-				"check": false
+				"check": false,
+				"educationLevel": "Graduate / Professional"
 			},
 			{
 				"micrositeTitle": "MI",
@@ -1736,7 +1922,8 @@
 				"updated": "2021-12-24T18:25:43.511Z",
 				"reviews": 100,
 				"num_alerts": 2,
-				"check": false
+				"check": false,
+				"educationLevel": "Career Technical"
 			},
 			{
 				"micrositeTitle": "LOUIS",
@@ -1747,7 +1934,8 @@
 				"updated": "2021-04-14T18:25:43.511Z",
 				"reviews": 170,
 				"num_alerts": 1,
-				"check": true
+				"check": true,
+				"educationLevel": "Career Technical"
 			}
 		]
 	},
@@ -1759,26 +1947,28 @@
       "stars": 4,
       "reviews": 10,
       "subject": "Art History",
-      "materialType": "courses",
-      "level": "Community College/Lower Division",
+      "materialType": "Courses",
+      "level": "Community College / Lower Division",
       "accessibility": "Partially Accessible",
       "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
       "licenseType": "Only Sharing Permitted",
-      "licenseIndex": "cc-by-nd"
+      "licenseIndex": "cc-by-nd",
+			"mediaFormat": "Audio"
     },
     {
-      "site": "The Saylor foundation",
+      "site": "ATLAS",
       "courseTitle": "Art Apprecaition and techniques",
       "updated": "2021-07-01T18:25:43.511Z",
       "stars": 4,
       "reviews": 100,
       "subject": "Art History",
-      "materialType": "textbooks",
-      "level": "Community College/Lower Division, College/Upper Division",
+      "materialType": "Textbooks",
+      "level": "College / Upper Division",
       "accessibility": "Accessible",
       "overview": "This courese is an exploration of visual art forms and thir cultural connections for the student with...",
       "licenseType": "Conditional Remix & Share Permitted",
-      "licenseIndex": "cc-by-nc-sa"
+      "licenseIndex": "cc-by-nc-sa",
+			"mediaFormat": "Braille/BRF"
     },
     {
       "site": "MOST",
@@ -1787,12 +1977,13 @@
       "stars": 3,
       "reviews": 0,
       "subject": "Cats History",
-      "materialType": "modules",
-      "level": "Community College/Lower Division",
+      "materialType": "Modules",
+      "level": "High School",
       "accessibility": "Partially Accessible",
       "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
       "licenseType": "Read the Fine Print",
-      "licenseIndex": "read"
+      "licenseIndex": "read",
+			"mediaFormat": "Downloadable docs"
     },
     {
       "site": "WI",
@@ -1801,12 +1992,13 @@
       "stars": 3,
       "reviews": 99,
       "subject": "Dogs History",
-      "materialType": "readings",
-      "level": "Community College/Lower Division",
+      "materialType": "Readings",
+      "level": "Middle School",
       "accessibility": "Partially Accessible",
       "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
       "licenseType": "Read the Fine Print",
-      "licenseIndex": "read"
+      "licenseIndex": "read",
+			"mediaFormat": "eBook"
     },
     {
       "site": "VIDE",
@@ -1815,12 +2007,13 @@
       "stars": 3,
       "reviews": 9,
       "subject": "Parrots History",
-      "materialType": "activity",
-      "level": "Community College/Lower Division",
+      "materialType": "Activity/Lab",
+      "level": "Lower Primary",
       "accessibility": "Not Evaluated",
       "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
       "licenseType": "Conditional Remix & Share Permitted",
-      "licenseIndex": "cc-by-nc-sa"
+      "licenseIndex": "cc-by-nc-sa",
+			"mediaFormat": "Graphics/Photos"
     },
     {
       "site": "LOUSE",
@@ -1829,12 +2022,13 @@
       "stars": 3,
       "reviews": 91,
       "subject": "Hourse History",
-      "materialType": "lecture",
-      "level": "Community College/Lower Division",
+      "materialType": "Lecture",
+      "level": "Upper Primary",
       "accessibility": "Accessible",
       "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
       "licenseType": "Only Sharing Permitted",
-      "licenseIndex": "cc-by-nd"
+      "licenseIndex": "cc-by-nd",
+			"mediaFormat": "Interactive"
     },
     {
       "site": "OH",
@@ -1843,12 +2037,58 @@
       "stars": 3,
       "reviews": 1,
       "subject": "Mouse History",
-      "materialType": "syllabus",
-      "level": "Community College/Lower Division",
+      "materialType": "Syllabus",
+      "level": "Preschool",
       "accessibility": "Accessible",
       "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
       "licenseType": "Unrestricted Use",
-      "licenseIndex": "cc-by"
+      "licenseIndex": "cc-by",
+			"mediaFormat": "Mobile"
+    },
+		{
+      "site": "VIVA",
+      "courseTitle": "House",
+      "updated": "2011-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 10,
+      "subject": "House History",
+      "materialType": "Diagram/Illustration",
+      "level": "Adult Education",
+      "accessibility": "Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Unrestricted Use",
+      "licenseIndex": "cc-by",
+			"mediaFormat": "Text/HTML"
+    },
+		{
+      "site": "WI",
+      "courseTitle": "Moon",
+      "updated": "2012-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 11,
+      "subject": "Moon History",
+      "materialType": "Interactive",
+      "level": "Career Technical",
+      "accessibility": "Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Unrestricted Use",
+      "licenseIndex": "cc-by",
+			"mediaFormat": "Video"
+    },
+		{
+      "site": "LOUSE",
+      "courseTitle": "Lamb",
+      "updated": "2013-05-14T18:25:43.511Z",
+      "stars": 3,
+      "reviews": 17,
+      "subject": "Lamb History",
+      "materialType": "Lesson",
+      "level": "Graduate / Professional",
+      "accessibility": "Accessible",
+      "overview": "This is an exploration of visual art forms and their cultural connections for the student with little experience in...",
+      "licenseType": "Unrestricted Use",
+      "licenseIndex": "cc-by",
+			"mediaFormat": "Other"
     }
   ]
 }

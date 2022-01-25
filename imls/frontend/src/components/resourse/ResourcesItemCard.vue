@@ -1,7 +1,8 @@
 <template>
-  <router-link :to="{ name: 'course' }" class="hover:text-current hover:no-underline">
-    <li
-      class="shadow-md m-w-resource h-card mb-15px px-4 py-2 bg-white block rounded-md flex flex-nowrap justify-between"
+  <li>
+    <router-link
+      :to="{ name: 'course' }"
+      class="shadow-md m-w-resource h-card mb-15px px-4 py-2 bg-white block rounded-md flex flex-nowrap justify-between hover:text-current hover:no-underline"
     >
       <div class="w-4/5 px-2 py-2">
         <p>{{ course.site }}</p>
@@ -202,8 +203,8 @@
           </svg>
         </div>
       </div>
-    </li>
-  </router-link>
+    </router-link>
+  </li>
 </template>
 
 <script>

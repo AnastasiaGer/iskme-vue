@@ -5,14 +5,14 @@
       :style="{ 'margin-left': '-' + 100 * currentSlideIndex + '%' }"
     >
       <CollectionItemCard
-        v-for="(collection, index) in this.collections"
-        :key="index"
+        v-for="(collection) in this.collections"
+        :key="collection.id + Math.random()"
         v-bind:collection="collection"
       />
     </ul>
     <div class="mx-0 my-auto flex">
-      <Button @click="prevSlide" label="Previous"/>
-      <Button @click="nextSlide" label="Next"/>
+      <Button @click="prevSlide" label="Previous" />
+      <Button @click="nextSlide" label="Next" />
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
   props: ["collections"],
   components: {
     CollectionItemCard,
-      Button
+    Button
   },
   data() {
     return {

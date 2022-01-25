@@ -1,6 +1,6 @@
 <template>
   <div class="shadow-md list-none">
-    <router-link :to="{ name: 'collection-details', params: {id: collection.id} }" class="text-blue-800 mb-4">
+    <router-link :to="{ name: 'collection-details', params: {id: collection.id} }" class="text-blue-800 mb-4" aria-label="Explore more about course">
       <svg
         class="inline-block mr-2"
         xmlns="http://www.w3.org/2000/svg"

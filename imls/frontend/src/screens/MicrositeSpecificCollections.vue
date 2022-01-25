@@ -1,6 +1,6 @@
 <template>
   <div id="micrositeSpecificCollections" class>
-    <router-link :to="{ name: 'browse-collections' }" class="text-blue-800 mb-15px">
+    <router-link :to="{ name: 'browse-collections' }" class="text-blue-800 mb-15px" aria-label="Go Back to Browse Collections page">
       <svg
         class="inline-block mr-2"
         xmlns="http://www.w3.org/2000/svg"

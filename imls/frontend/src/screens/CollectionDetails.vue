@@ -2,7 +2,11 @@
   <div id="collection_details" class="flex">
     <div class="flex flex-col w-1/4 mr-4 shadow-md p-4 bg-white">
       <div class="flex justify-between">
-        <router-link :to="{ name: 'browse-collections' }" class="text-blue-800 mb-4">
+        <router-link
+          :to="{ name: 'browse-collections' }"
+          class="text-blue-800 mb-4"
+          aria-label="Go Back to Browse Collections page"
+        >
           <svg
             class="inline-block mr-2"
             xmlns="http://www.w3.org/2000/svg"
@@ -32,25 +36,16 @@
             </g>
           </svg>Back
         </router-link>
-        <a href="#">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379
-                    5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
-            />
-          </svg>
-        </a>
       </div>
       <div class="flex flex-col justify-between bg-white">
-        <img class v-bind:src="'/static/imls/collections/1.jpeg'" alt="Collection Photo" />
-        <p class="m-1">VIVA</p>
-        <h3 class="m-1 font-bold text-base">Art History</h3>
-        <p class="m-1 font-bold text-base">12 resources | Higher Ed</p>
+        <img
+          class
+          v-bind:src="'/static/imls/collections/' + collectionThumbnail"
+          :alt="collectionTitle"
+        />
+        <p class="m-1">{{ micrositeTitle }}</p>
+        <h3 class="m-1 font-bold text-base">{{ collectionTitle }}</h3>
+        <p class="m-1 font-bold text-base">{{ resourcesNumber }} resources | {{ educationLevel }}</p>
         <p class="m-1 font-bold text-base">Created May 2020 | 6 Subscribers</p>
         <Button
           label="Add Collection to site"
@@ -83,7 +78,43 @@
         </a>
         <p class="m-1">75% of collection / (9) Resources are not in your library</p>
       </div>
-      <Filters />
+      <h5 class="text-base font-bold">Filters</h5>
+      <div class="flex flex-col justify-between bg-white">
+        <form>
+          <ul>
+            <Filters
+              v-bind:filterTypes="filterMicrositesCurators"
+              filterTitle="Microsite Curators"
+              v-model="categories"
+            />
+            <Filters
+              v-bind:filterTypes="filterEducationLevels"
+              filterTitle="Education Levels"
+              v-model="educationLevels"
+            />
+            <Filters
+              v-bind:filterTypes="filterMaterialTypes"
+              filterTitle="Material Types"
+              v-model="materialTypes"
+            />
+            <Filters
+              v-bind:filterTypes="filterMediaFormats"
+              filterTitle="Media Formats"
+              v-model="mediaFormats"
+            />
+            <Filters
+              v-bind:filterTypes="filterLicenseTypes"
+              filterTitle="License Types"
+              v-model="licenseTypes"
+            />
+          </ul>
+        </form>
+      </div>
+      <Button
+        label="Reset"
+        @click="clear"
+        class="rounded-lg shadow-sm bg-blue-800 text-center text-white px-2 py-2"
+      ></Button>
     </div>
 
     <div class="flex-1">
@@ -95,16 +126,20 @@
           <Select v-model="filter" :options="options"></Select>
         </div>
       </div>
-      <div class="flex items-center">
-        <ResourcesList v-bind:database="filteredCourses(filter, searchQuery)" />
-      </div>
+      <ul class>
+        <ResourcesItemCard
+          v-for="course in filteredCourses(filter, searchQuery, categories, educationLevels, materialTypes, mediaFormats, licenseTypes)"
+          :key="course.site + Math.random()"
+          v-bind:course="course"
+        />
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
 import SearchBar from "../components/elements/SearchBar.vue";
-import ResourcesList from "../components/resourse/ResourcesList.vue";
+import ResourcesItemCard from "../components/resourse/ResourcesItemCard.vue";
 import Button from "../components/elements/Button.vue";
 import Select from "../components/elements/Select.vue";
 import Filters from '../components/elements/Filters.vue';
@@ -112,9 +147,21 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: "CollectionDetails",
+  props: {
+    collection: {
+      type: Object,
+      required: true
+    },
+    collectionId: { type: Number },
+    collectionThumbnail: { type: String },
+    collectionTitle: { type: String },
+    micrositeTitle: { type: String },
+    resourcesNumber: { type: Number },
+    educationLevel: { type: String },
+  },
   components: {
     SearchBar,
-    ResourcesList,
+    ResourcesItemCard,
     Button,
     Select,
     Filters
@@ -130,18 +177,55 @@ export default {
       ],
       // range: [20, 1900],
       filter: 'all',
-      searchQuery: ''
+      searchQuery: '',
+      categories: [],
+      educationLevels: [],
+      materialTypes: [],
+      mediaFormats: [],
+      licenseTypes: []
     };
   },
-  mounted() {
-
-  },
   methods: {
-    clickBtn() {},
+    init() {
+      if (('.checkboxes-sum .checkbox-item').length > 10) {
+        this.collapsed = true
+      }
+    },
+    toggle() {
+      this.active = !this.active
+    },
+    toggleEducation() {
+      this.activeEducation = !this.activeEducation
+    },
+    clear() {
+      this.searchQuery = '';
+      this.filter = 'all';
+      this.categories = [];
+      this.educationLevels = [];
+      this.materialTypes = [];
+      this.mediaFormats = [];
+      this.licenseTypes = [];
+    }
+  },
+  mounted() {
+    this.init()
   },
   computed: {
-    courses() {
-      return this.$store.state.courses;
+    //TODO: Use all list of microsites OR only that have resources?
+    filterMicrositesCurators() {
+      return [...new Set(this.$store.state.microsites.map(el => el.name))]
+    },
+    filterEducationLevels() {
+      return [...new Set(this.$store.state.courses.map(el => el.level))]
+    },
+    filterMaterialTypes() {
+      return [...new Set(this.$store.state.courses.map(el => el.materialType))]
+    },
+    filterMediaFormats() {
+      return [...new Set(this.$store.state.courses.map(el => el.mediaFormat))]
+    },
+    filterLicenseTypes() {
+      return [...new Set(this.$store.state.courses.map(el => el.licenseType))]
     },
     ...mapGetters(["filteredCourses"])
   },
@@ -150,4 +234,11 @@ export default {
 
 <style src='../assets/styles/index.css'></style>
 <style lang="postcss">
+.u-hidden {
+  display: none !important;
+}
+
+.is-collapsed .checkbox-item:nth-child(n + 10) {
+  display: none;
+}
 </style>

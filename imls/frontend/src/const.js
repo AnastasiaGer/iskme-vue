@@ -22,7 +22,7 @@ export const routes = [
   { path: "/all-collections", name: "all-collections", component: AllCollections,},
   { path: '/map', name: 'map', component: Map },
   { path: '/settings', name: 'settings', component: Settings },
-  { path: '/details/collection/:id', name: 'collection-details', component: CollectionDetails, props: true },
+  { path: '/details/:collectionId', name: 'collection-details', component: CollectionDetails, props: true },
   { path: '/details/collection/course', name: 'course', component: CourseItem, props: true },
   { path: '/microsite-specific-collections/:id', name: 'microsite-specific-collections', component: MicrositeSpecificCollections, props: true },
 ]

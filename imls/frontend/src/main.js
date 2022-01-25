@@ -71,70 +71,81 @@ const store = new Vuex.Store({
     },
   },
   getters: {
-    filteredCollections: (state) => (filter, searchQuery) => {
-      let filteredCollections = [];
+    filteredCollections: (state) => (filter, searchQuery, categories, educationLevels) => {
+      const cleanedupQuery = searchQuery.trim().toLowerCase();
+      let filteredCollections = []
 
-      if (filter === "reviews") {
-        filteredCollections = state.paginated_collections.collections
-          .map((el) => el)
-          .sort((a, b) => b.reviews - a.reviews);
-      } else if (filter === "last-modified") {
-        filteredCollections = state.paginated_collections.collections
-          .map((el) => el)
-          .sort((a, b) => new Date(b.updated) - new Date(a.updated));
-      }
+      filteredCollections = state.paginated_collections.collections
+        .map((el) => el)
+        .filter(x => {
+          return categories.length == 0 || categories.indexOf(x.micrositeTitle.toString()) != -1
+        })
+        .filter(x => {
+          return educationLevels.length == 0 || educationLevels.indexOf(x.educationLevel.toString()) != -1
+        })
+        .filter(x => {
+          return searchQuery.length == 0 || x.collectionTitle.toLowerCase().includes(cleanedupQuery)
+        })
 
-      if (searchQuery) {
-        const cleanedupQuery = searchQuery.trim().toLowerCase();
-        filteredCollections = state.paginated_collections.collections
-          .map((el) => el)
-          .filter((item) =>
-            item.collectionTitle.toLowerCase().includes(cleanedupQuery)
-          );
-      }
-
-      return filteredCollections;
-    },
-    filteredCourses: (state) => (filter, searchQuery) => {
-      let filteredCourses;
-      if (filter === "all") {
-        filteredCourses = state.courses;
-      }
-
-      if (searchQuery) {
-        const cleanedupQuery = searchQuery.trim().toLowerCase();
-        filteredCourses = state.courses
-          .map((el) => el)
-          .filter((item) =>
-            item.courseTitle.toLowerCase().includes(cleanedupQuery)
-          );
-      }
-
-      //TODO: Sort filtered base
+      let sorted = []
 
       if (filter === "last-modified") {
-        filteredCourses = state.courses
+        sorted = filteredCollections
           .map((el) => el)
           .sort((a, b) => new Date(b.updated) - new Date(a.updated));
-      }
-
-      if (filter === "reviews") {
-        filteredCourses = state.courses
+      } else if (filter === "reviews") {
+        sorted = filteredCollections
           .map((el) => el)
           .sort((a, b) => b.reviews - a.reviews);
       }
 
-      if (filter === "title") {
-        filteredCourses = state.courses
+      return sorted;
+    },
+    filteredCourses: (state) => (filter, searchQuery, categories, educationLevels, materialTypes, mediaFormats, licenseTypes) => {
+      const cleanedupQuery = searchQuery.trim().toLowerCase();
+      let filteredCourses = []
+
+      filteredCourses = state.courses
+        .map((el) => el)
+        .filter(x => {
+          return categories.length == 0 || categories.indexOf(x.site.toString()) != -1
+        })
+        .filter(x => {
+          return educationLevels.length == 0 || educationLevels.indexOf(x.level.toString()) != -1
+        })
+        .filter(x => {
+          return materialTypes.length == 0 || materialTypes.indexOf(x.materialType.toString()) != -1
+        })
+        .filter(x => {
+          return mediaFormats.length == 0 || mediaFormats.indexOf(x.mediaFormat.toString()) != -1
+        })
+        .filter(x => {
+          return licenseTypes.length == 0 || licenseTypes.indexOf(x.licenseType.toString()) != -1
+        })
+        .filter(x => {
+          return searchQuery.length == 0 || x.courseTitle.toLowerCase().includes(cleanedupQuery)
+        })
+
+      let sorted = []
+      if (filter === "all") {
+        sorted = filteredCourses
+      } else if (filter === "last-modified") {
+        sorted = filteredCourses
+          .map((el) => el)
+          .sort((a, b) => new Date(b.updated) - new Date(a.updated));
+      } else if (filter === "reviews") {
+        sorted = filteredCourses
+          .map((el) => el)
+          .sort((a, b) => b.reviews - a.reviews);
+      } else if (filter === "title") {
+        sorted = filteredCourses
           .map((el) => el)
           .sort((a, b) => a.courseTitle.localeCompare(b.courseTitle));
       }
-
       // if (this.filter === 'rating') {
       //   filtered = this.database.map(el => el).sort((a,b) => a.rating - b.rating)
       // }
-
-      return filteredCourses;
+      return sorted;
     },
   },
 });

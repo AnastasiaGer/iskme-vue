@@ -12,12 +12,12 @@
           class="microsite-item-card"
         />
     </ul>
-    <button
+    <button type="button"
       v-bind:class="{ 'u-hidden': !collapsed }"
       v-on:click="collapsed = !collapsed"
       class="text-blue-800 font-bold text-center mb-25px"
     >Show all</button>
-    <button
+    <button type="button"
       v-bind:class="{ 'u-hidden': collapsed }"
       v-on:click="collapsed = !collapsed"
       class="text-blue-800 font-bold text-center mb-25px"

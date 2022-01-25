@@ -1,11 +1,24 @@
 <template>
-  <router-link :to="{ name: 'collection-details', params: { id: collection.id } }">
-    <li class="col_card flex flex-col items-center justify-center bg-white shadow rounded-lg mr-15px">
+  <li>
+    <router-link
+      :to="{
+        name: 'collection-details', params: {
+          collectionId: collection.collectionId,
+          collectionThumbnail: collection.collectionThumbnail,
+          collectionTitle: collection.collectionTitle,
+          micrositeTitle: collection.micrositeTitle,
+          resourcesNumber: collection.resourcesNumber,
+          educationLevel: collection.educationLevel,
+        }
+      }"
+      class="col_card flex flex-col items-center justify-center bg-white shadow rounded-lg mr-15px"
+      aria-label="Explore more about collection"
+    >
       <div class="relative h-2/3 w-full overflow-hidden">
         <img
           class="absolute top-0 left-0 object-cover"
           v-bind:src="'/static/imls/collections/' + collection.collectionThumbnail"
-          alt="Collection Photo"
+          :alt="collection.collectionTitle"
         />
         <div
           v-if="collection.num_alerts > 0"
@@ -65,15 +78,16 @@
             </g>
           </svg>
         </div>
-        <h4
+        <h3
           class="font-bold text-sm absolute bottom-0 w-full text-center text-white text-shadow-lg"
-        >{{ collection.collectionTitle }}</h4>
+          role="heading"
+        >{{ collection.collectionTitle }}</h3>
       </div>
 
       <p class="font-bold text-sm">{{ collection.micrositeTitle }}</p>
       <p class="text-sm font-sm">{{ collection.resourcesNumber }} resources</p>
-    </li>
-  </router-link>
+    </router-link>
+  </li>
 </template>
 
 <script>
