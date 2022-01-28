@@ -71,6 +71,35 @@ const store = new Vuex.Store({
     },
   },
   getters: {
+    collectionsByMicrosite: (state) => (siteName, filter, searchQuery) => {
+      let bySite = state.paginated_collections.collections
+        .map((el) => el)
+        .filter(c => c.micrositeTitle === siteName)
+
+      let sortedCollections = []
+
+      if (filter === "last-modified") {
+        sortedCollections = bySite
+          .map((el) => el)
+          .sort((a, b) => new Date(b.updated) - new Date(a.updated));
+      } else if (filter === "reviews") {
+        sortedCollections = bySite
+          .map((el) => el)
+          .sort((a, b) => b.reviews - a.reviews);
+      }
+
+      const cleanedupQuery = searchQuery.trim().toLowerCase();
+      let micrositeCollections = []
+
+      micrositeCollections = sortedCollections
+        .map((item) => item)
+        .filter(search => {
+          return searchQuery.length == 0 || search.collectionTitle.toLowerCase().includes(cleanedupQuery)
+        })
+
+      return micrositeCollections;
+    },
+
     filteredCollections: (state) => (filter, searchQuery, categories, educationLevels) => {
       const cleanedupQuery = searchQuery.trim().toLowerCase();
       let filteredCollections = []
@@ -101,14 +130,19 @@ const store = new Vuex.Store({
 
       return sorted;
     },
-    filteredCourses: (state) => (filter, searchQuery, categories, educationLevels, materialTypes, mediaFormats, licenseTypes) => {
+    filteredCourses: (state) => (collectionName, filter, searchQuery, educationLevels, materialTypes, mediaFormats, licenseTypes) => {
+      const coursesBySite = state.courses
+        .map((el) => el)
+        .filter(s => s.collectionTitle === collectionName)
+
+
       const cleanedupQuery = searchQuery.trim().toLowerCase();
       let filteredCourses = []
 
-      filteredCourses = state.courses
+      filteredCourses = coursesBySite
         .map((el) => el)
         .filter(x => {
-          return categories.length == 0 || categories.indexOf(x.site.toString()) != -1
+          return educationLevels.length == 0 || educationLevels.indexOf(x.level.toString()) != -1
         })
         .filter(x => {
           return educationLevels.length == 0 || educationLevels.indexOf(x.level.toString()) != -1

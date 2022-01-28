@@ -34,7 +34,7 @@
                 stroke-linejoin="round"
               />
             </g>
-          </svg>Back
+          </svg>Back to Browse page
         </router-link>
       </div>
       <div class="flex flex-col justify-between bg-white">
@@ -49,7 +49,6 @@
         <p class="m-1 font-bold text-base">Created May 2020 | 6 Subscribers</p>
         <Button
           label="Add Collection to site"
-          @click="clickBtn"
           class="rounded-lg shadow-sm bg-blue-800 text-center text-white px-2 py-2"
         ></Button>
         <a href="#" class="text-blue-600 m-1">
@@ -82,11 +81,6 @@
       <div class="flex flex-col justify-between bg-white">
         <form>
           <ul>
-            <Filters
-              v-bind:filterTypes="filterMicrositesCurators"
-              filterTitle="Microsite Curators"
-              v-model="categories"
-            />
             <Filters
               v-bind:filterTypes="filterEducationLevels"
               filterTitle="Education Levels"
@@ -128,7 +122,7 @@
       </div>
       <ul class>
         <ResourcesItemCard
-          v-for="course in filteredCourses(filter, searchQuery, categories, educationLevels, materialTypes, mediaFormats, licenseTypes)"
+          v-for="course in filteredCourses(collectionName, filter, searchQuery, educationLevels, materialTypes, mediaFormats, licenseTypes)"
           :key="course.site + Math.random()"
           v-bind:course="course"
         />
@@ -148,10 +142,6 @@ import { mapGetters } from 'vuex'
 export default {
   name: "CollectionDetails",
   props: {
-    collection: {
-      type: Object,
-      required: true
-    },
     collectionId: { type: Number },
     collectionThumbnail: { type: String },
     collectionTitle: { type: String },
@@ -178,43 +168,25 @@ export default {
       // range: [20, 1900],
       filter: 'all',
       searchQuery: '',
-      categories: [],
       educationLevels: [],
       materialTypes: [],
       mediaFormats: [],
-      licenseTypes: []
+      licenseTypes: [],
+      collectionName: this.collectionTitle
     };
   },
   methods: {
-    init() {
-      if (('.checkboxes-sum .checkbox-item').length > 10) {
-        this.collapsed = true
-      }
-    },
-    toggle() {
-      this.active = !this.active
-    },
-    toggleEducation() {
-      this.activeEducation = !this.activeEducation
-    },
     clear() {
       this.searchQuery = '';
       this.filter = 'all';
-      this.categories = [];
       this.educationLevels = [];
       this.materialTypes = [];
       this.mediaFormats = [];
       this.licenseTypes = [];
     }
   },
-  mounted() {
-    this.init()
-  },
   computed: {
     //TODO: Use all list of microsites OR only that have resources?
-    filterMicrositesCurators() {
-      return [...new Set(this.$store.state.microsites.map(el => el.name))]
-    },
     filterEducationLevels() {
       return [...new Set(this.$store.state.courses.map(el => el.level))]
     },
@@ -233,12 +205,3 @@ export default {
 </script>
 
 <style src='../assets/styles/index.css'></style>
-<style lang="postcss">
-.u-hidden {
-  display: none !important;
-}
-
-.is-collapsed .checkbox-item:nth-child(n + 10) {
-  display: none;
-}
-</style>

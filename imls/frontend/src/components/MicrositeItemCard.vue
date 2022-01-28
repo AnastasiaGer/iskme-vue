@@ -1,12 +1,16 @@
 <template>
   <li>
     <router-link
-      :to="{ name: 'microsite-specific-collections', params: { id: microsite.id } }"
+      :to="{ name: 'microsite-specific-collections', params: { id: parseFloat(microsite.id), title: microsite.name } }"
       class="col_card flex flex-col items-center justify-center bg-white shadow rounded-lg mb-4"
       aria-label="Explore more about microsite"
     >
       <div class="relative h-2/3 w-full overflow-hidden">
-        <img class="absolute top-0 left-0 object-cover" :src="microsite.cover_img" :alt="microsite.name" />
+        <img
+          class="absolute top-0 left-0 object-cover"
+          :src="microsite.cover_img"
+          :alt="microsite.name"
+        />
         <h3
           class="font-bold text-sm absolute bottom-0 w-full text-center text-white text-shadow-lg"
           role="heading"

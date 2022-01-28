@@ -1,6 +1,10 @@
 <template>
   <div id="micrositeSpecificCollections" class>
-    <router-link :to="{ name: 'browse-collections' }" class="text-blue-800 mb-15px" aria-label="Go Back to Browse Collections page">
+    <router-link
+      :to="{ name: 'browse-collections' }"
+      class="text-blue-800 mb-15px"
+      aria-label="Go Back to Browse Collections page"
+    >
       <svg
         class="inline-block mr-2"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,26 +34,28 @@
         </g>
       </svg>Back to Browse page
     </router-link>
-    <h1 class="font-bold mb-4 mt-4">{{database[0].micrositeTitle}} Collections</h1>
+    <h1 class="font-bold mb-4 mt-4">{{ title }} Collections</h1>
+    <SearchBar v-model="searchQuery" class="mb-15px" />
+
     <div class="flex-1">
-      <SearchBar v-model="searchQuery" class="mb-15px" />
       <div class="flex items-center mb-2">
-        <span class="flex-1">{{database.length}} Collections</span>
-        <ul class="inline-flex flex-initial gap-x-6 items-center">
-          <li>
-            Sort by:
-            <Select v-model="filter" :options="options"></Select>
-          </li>
-        </ul>
+        <span
+          class="flex-1"
+        >{{ collectionsByMicrosite(collectionName, filter, searchQuery).length }} Collections</span>
+        <div class="inline-flex flex-initial gap-x-6 items-center">
+          Sort by:
+          <Select v-model="filter" :options="options"></Select>
+        </div>
       </div>
+
+      <ul class="flex flex-wrap mt-4 gap-4">
+        <CollectionItemCard
+          v-for="collection in collectionsByMicrosite(collectionName, filter, searchQuery)"
+          :key="collection.id + Math.random()"
+          v-bind:collection="collection"
+        />
+      </ul>
     </div>
-    <ul class="flex flex-wrap mt-4 gap-4">
-      <CollectionItemCard
-        v-for="(collection, index) in filteredCourses"
-        :key="index"
-        v-bind:collection="collection"
-      />
-    </ul>
   </div>
 </template>
 
@@ -57,64 +63,35 @@
 import SearchBar from '../components/elements/SearchBar.vue';
 import CollectionItemCard from '../components/collection/CollectionItemCard.vue';
 import Select from "../components/elements/Select.vue";
-import { ENTRY_POINT } from '../const.js'
-
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'MicrositeSpecificCollections',
+  props: {
+    id: { type: Number },
+    title: { type: String },
+  },
   components: {
     SearchBar,
     CollectionItemCard,
     Select
   },
-  props: ['id'],
   data() {
     return {
-      database: [],
       options: [
         { name: "Newest", id: 2, value: "last-modified" },
         { name: "Most Popular", id: 3, value: "reviews" },
       ],
       filter: 'last-modified',
       searchQuery: '',
+      collectionName: this.title //TODO: make localStorage for title
       //id: this.$route.params.id
     }
   },
-  mounted() {
-    fetch(ENTRY_POINT)
-      .then(response => response.json())
-      .then(json => {
-        this.database = json.collections.filter(el => el.id === this.id)
-      })
-  },
   computed: {
-    filteredCourses() {
-      let filtered;
-      if (this.filter === "last-modified") {
-        filtered = this.database
-          .map((el) => el)
-          .sort((a, b) => new Date(b.updated) - new Date(a.updated));
-      }
-
-      if (this.searchQuery) {
-        const cleanedupQuery = this.searchQuery.trim().toLowerCase();
-        filtered = this.database
-          .map((el) => el)
-          .filter((item) =>
-            item.courseTitle.toLowerCase().includes(cleanedupQuery));
-      }
-
-      //TODO: Sort filtered base
-
-      if (this.filter === "reviews") {
-        filtered = this.database
-          .map((el) => el)
-          .sort((a, b) => b.reviews - a.reviews);
-      }
-
-      return filtered;
-    },
+    ...mapGetters(["collectionsByMicrosite"])
   },
 }
 </script>
 
+<style src='../assets/styles/index.css'></style>
